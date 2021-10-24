@@ -1,0 +1,23 @@
+﻿@inherits WebViewPage
+@{
+    Layout = "MVCLayout.cshtml";
+}
+
+
+<div class="wrapper">
+    <div class="header_wrapper">
+        <!-- header -->
+        @Html.Sitecore().Placeholder("header")
+        <!-- Navigation -->
+        @Html.Sitecore().Placeholder("Navigation")
+    </div>
+</div>
+
+<!-- Content section -->
+<section class="main">
+    <section class="home">
+        @Html.Sitecore().Placeholder("main")
+    </section> 
+</section>
+
+@Html.Sitecore().Placeholder("footer")

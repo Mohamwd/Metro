@@ -1,0 +1,14 @@
+﻿@using Metro.Feature.Navigation
+
+@model Sitecore.Mvc.Presentation.RenderingModel
+
+@{
+    if (Model.Item == null)
+    {
+        return;
+    }
+}
+
+<li id="@Model.Item.ID.ToShortID().ToString()" class="menu-item menu-item-type-post_type menu-item-object-page" style="display:block">
+    @Html.Sitecore().Field(Templates.Link.Fields.Link.ToString(), Model.Item)
+</li>

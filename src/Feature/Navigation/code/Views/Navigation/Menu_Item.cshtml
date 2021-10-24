@@ -1,0 +1,26 @@
+﻿@using Metro.Feature.Navigation
+@model Sitecore.Mvc.Presentation.RenderingModel
+
+@{
+    if (Model.Item == null)
+    {
+        return;
+    }
+}
+
+<li id="@Model.Item.ID.ToShortID().ToString()" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children megamenu-heading">
+    @Html.Sitecore().Field(Templates.Link.Fields.Link.ToString(), Model.Item, new { style = "display:inline-block" })
+
+
+    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <span onclick="StickMenue(event)" style="margin-right:10px" class="fa fa-pencil">
+         </span>
+    }
+    <ul class="sub-menu">
+        @Html.Sitecore().DynamicPlaceholder("sub-menu-item")
+    </ul>
+</li>
+
+
+

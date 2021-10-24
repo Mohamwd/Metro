@@ -1,0 +1,202 @@
+﻿@using Sitecore.Mvc.Analytics.Extensions
+@using Sitecore.ExperienceForms.Mvc.Html
+
+@inherits WebViewPage
+@{
+    Layout = null;
+    var extraFolder = "/dist";
+    if (Sitecore.Context.Language.CultureInfo.TextInfo.IsRightToLeft)
+    {
+        extraFolder = "/ar/dist";
+    }
+    var language = Sitecore.Context.Language.CultureInfo.Name.Split('-')[0];
+
+}
+
+
+<!DOCTYPE html>
+<html lang="en-US"
+      prefix="og: https://ogp.me/ns#" class="no-js" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="https://www.greenstreetcoffee.com/xmlrpc.php">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://www.greenstreetcoffee.com/wp-content/uploads/2014/06/32favicon1.png" type="image/x-icon" />
+    <script>
+    (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <meta name='robots' content='max-image-preview:large' />
+
+    <!-- All in One SEO 4.0.11 -->
+    <title>Greenstreet Coffee Roasters</title>
+    <meta name="description" content="Greenstreet is passionate about the craft of coffee. All our coffees are sustainably sourced and roasted locally in small batches." />
+    <link rel="canonical" href="https://www.greenstreetcoffee.com" />
+    <meta property="og:site_name" content="Greenstreet Coffee Roasters |" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Greenstreet Coffee Roasters" />
+    <meta property="og:description" content="Greenstreet is passionate about the craft of coffee. All our coffees are sustainably sourced and roasted locally in small batches." />
+    <meta property="og:url" content="https://www.greenstreetcoffee.com" />
+    <meta property="article:published_time" content="2012-08-21T14:08:57Z" />
+    <meta property="article:modified_time" content="2021-05-18T18:13:36Z" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:domain" content="www.greenstreetcoffee.com" />
+    <meta property="twitter:title" content="Greenstreet Coffee Roasters" />
+    <meta property="twitter:description" content="Greenstreet is passionate about the craft of coffee. All our coffees are sustainably sourced and roasted locally in small batches." />
+    @*<script type="application/ld+json" class="aioseo-schema">
+        {"@context":"https:\/\/schema.org","@graph":[{"@type":"WebSite","@id":"https:\/\/www.greenstreetcoffee.com\/#website","url":"https:\/\/www.greenstreetcoffee.com\/","name":"Greenstreet Coffee Roasters","publisher":{"@id":"https:\/\/www.greenstreetcoffee.com\/#organization"},"potentialAction":{"@type":"SearchAction","target":"https:\/\/www.greenstreetcoffee.com\/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Organization","@id":"https:\/\/www.greenstreetcoffee.com\/#organization","name":"Greenstreet Coffee Roasters","url":"https:\/\/www.greenstreetcoffee.com\/"},{"@type":"BreadcrumbList","@id":"https:\/\/www.greenstreetcoffee.com\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/www.greenstreetcoffee.com\/#listItem","position":1,"item":{"@type":"WebPage","@id":"https:\/\/www.greenstreetcoffee.com\/#item","name":"Home","description":"Greenstreet is passionate about the craft of coffee. All our coffees are sustainably sourced and roasted locally in small batches.","url":"https:\/\/www.greenstreetcoffee.com\/"}}]},{"@type":"WebPage","@id":"https:\/\/www.greenstreetcoffee.com\/#webpage","url":"https:\/\/www.greenstreetcoffee.com\/","name":"Greenstreet Coffee Roasters","description":"Greenstreet is passionate about the craft of coffee. All our coffees are sustainably sourced and roasted locally in small batches.","inLanguage":"en-US","isPartOf":{"@id":"https:\/\/www.greenstreetcoffee.com\/#website"},"breadcrumb":{"@id":"https:\/\/www.greenstreetcoffee.com\/#breadcrumblist"},"datePublished":"2012-08-21T14:08:57-04:00","dateModified":"2021-05-18T18:13:36-04:00"}]}
+    </script>*@
+    <script type="text/javascript">
+        window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+        ga('create', "UA-38515426-1", 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <!-- All in One SEO -->
+
+    <link rel='dns-prefetch' href='//ws.sharethis.com' />
+    <link rel='dns-prefetch' href='//maps.googleapis.com' />
+    <link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="alternate" type="application/rss+xml" title="Greenstreet Coffee Roasters &raquo; Feed" href="https://www.greenstreetcoffee.com/feed" />
+    <link rel="alternate" type="application/rss+xml" title="Greenstreet Coffee Roasters &raquo; Comments Feed" href="https://www.greenstreetcoffee.com/comments/feed" />
+    <link rel="alternate" type="text/calendar" title="Greenstreet Coffee Roasters &raquo; iCal Feed" href="https://www.greenstreetcoffee.com/classes/?ical=1" />
+    <script type="text/javascript">
+        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/www.greenstreetcoffee.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.1" } };
+        !function (e, a, t) { var n, r, o, i = a.createElement("canvas"), p = i.getContext && i.getContext("2d"); function s(e, t) { var a = String.fromCharCode; p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0); e = i.toDataURL(); return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL() } function c(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (o = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, r = 0; r < o.length; r++)t.supports[o[r]] = function (e) { if (!p || !p.fillText) return !1; switch (p.textBaseline = "top", p.font = "600 32px Arial", e) { case "flag": return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]); case "emoji": return !s([10084, 65039, 8205, 55357, 56613], [10084, 65039, 8203, 55357, 56613]) }return !1 }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji), c(n.wpemoji))) }(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='sb_instagram_styles-css' href='https://www.greenstreetcoffee.com/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=2.6.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='tribe-common-skeleton-style-css' href='https://www.greenstreetcoffee.com/wp-content/plugins/the-events-calendar/common/src/resources/css/common-skeleton.min.css?ver=4.12.15.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='tribe-tooltip-css' href='https://www.greenstreetcoffee.com/wp-content/plugins/the-events-calendar/common/src/resources/css/tooltip.min.css?ver=4.12.15.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-block-library-css' href='https://www.greenstreetcoffee.com/wp-includes/css/dist/block-library/style.min.css?ver=5.8.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='wc-block-vendors-style-css' href='https://www.greenstreetcoffee.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/vendors-style.css?ver=3.8.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='wc-block-style-css' href='https://www.greenstreetcoffee.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=3.8.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css' href='https://www.greenstreetcoffee.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.3.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='simple-share-buttons-adder-font-awesome-css' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?ver=5.8.1' type='text/css' media='all' />
+    <style id='woocommerce-inline-inline-css' type='text/css'>
+        .woocommerce form .form-row .required {
+            visibility: visible;
+        }
+    </style>
+    <link rel='stylesheet' id='mc4wp-form-themes-css' href='https://www.greenstreetcoffee.com/wp-content/plugins/mailchimp-for-wp/assets/css/form-themes.min.css?ver=4.8.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='laboutique-fonts-css' href='//fonts.googleapis.com/css?family=Lato%3A300%2C300italic%2C400%2C400italic%2C700%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+    <link rel='stylesheet' id='laboutique-fonts-script-css' href='//fonts.googleapis.com/css?family=Shadows+Into+Light' type='text/css' media='all' />
+    <link rel='stylesheet' id='bootstrap-css' href='https://www.greenstreetcoffee.com/wp-content/themes/laboutique/css/bootstrap.css?ver=1' type='text/css' media='all' />
+    <link rel='stylesheet' id='bootstrap-responsive-css' href='https://www.greenstreetcoffee.com/wp-content/themes/laboutique/css/bootstrap-responsive.css?ver=1' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-lb-css' href='https://www.greenstreetcoffee.com/wp-content/themes/laboutique/css/fonts/font-awesome.css?ver=1' type='text/css' media='all' />
+    <link rel='stylesheet' id='flexslider-css' href='https://www.greenstreetcoffee.com/wp-content/plugins/js_composer/assets/lib/bower/flexslider/flexslider.css?ver=4.7.4' type='text/css' media='screen' />
+    <link rel='stylesheet' id='style-css' href='https://www.greenstreetcoffee.com/wp-content/themes/laboutique/style.css?ver=1' type='text/css' media='all' />
+    <link rel='stylesheet' id='core-css' href='https://www.greenstreetcoffee.com/wp-content/themes/laboutique/css/color-schemes/turquoise.css?ver=1' type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_front-css' href='https://www.greenstreetcoffee.com/wp-content/plugins/js_composer/assets/css/js_composer.css?ver=4.7.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='child-style-css' href='https://www.greenstreetcoffee.com/wp-content/themes/laboutique-child/style.css?ver=5.8.1' type='text/css' media='all' />
+    <script type='text/javascript' src='https://www.greenstreetcoffee.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+    <script type='text/javascript' src='https://www.greenstreetcoffee.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+    <script id='st_insights_js' type='text/javascript' src='https://ws.sharethis.com/button/st_insights.js?publisher=4d48b7c5-0ae3-43d4-bfbe-3ff8c17a8ae6&#038;product=simpleshare' id='ssba-sharethis-js'></script>
+    <script type='text/javascript' src='https://www.greenstreetcoffee.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70' id='jquery-blockui-js'></script>
+    <script type='text/javascript' id='wc-add-to-cart-js-extra'>
+        /* <![CDATA[ */
+        var wc_add_to_cart_params = { "ajax_url": "\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "View cart", "cart_url": "https:\/\/www.greenstreetcoffee.com\/cart", "is_cart": "", "cart_redirect_after_add": "no" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='https://www.greenstreetcoffee.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=4.8.0' id='wc-add-to-cart-js'></script>
+    <script type='text/javascript' src='https://www.greenstreetcoffee.com/wp-content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart.js?ver=4.7.4' id='vc_woocommerce-add-to-cart-js-js'></script>
+    <link rel="https://api.w.org/" href="https://www.greenstreetcoffee.com/wp-json/" />
+    <link rel="alternate" type="application/json" href="https://www.greenstreetcoffee.com/wp-json/wp/v2/pages/5" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.greenstreetcoffee.com/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.greenstreetcoffee.com/wp-includes/wlwmanifest.xml" />
+    <link rel='shortlink' href='https://www.greenstreetcoffee.com/' />
+    <link rel="alternate" type="application/json+oembed" href="https://www.greenstreetcoffee.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.greenstreetcoffee.com%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="https://www.greenstreetcoffee.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.greenstreetcoffee.com%2F&#038;format=xml" />
+    <meta name="google-site-verification" content="M9B2_VDWCNbVODhSXa-wNzeKgQylbzMoVB0MZo0gRjo" />
+    <meta name="tec-api-version" content="v1">
+    <meta name="tec-api-origin" content="https://www.greenstreetcoffee.com">
+    <link rel="https://theeventscalendar.com/" href="https://www.greenstreetcoffee.com/wp-json/tribe/events/v1/" />
+    <noscript>
+    <style>
+        .woocommerce-product-gallery {
+            opacity: 1 !important;
+        }
+    </style></noscript>
+    <meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress." />
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://www.greenstreetcoffee.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.css" media="screen"><![endif]--><!--[if IE  8]><link rel="stylesheet" type="text/css" href="https://www.greenstreetcoffee.com/wp-content/plugins/js_composer/assets/css/vc-ie8.css" media="screen"><![endif]-->
+    <script type="text/javascript">
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    </script>
+    <!-- WooCommerce Facebook Integration Begin -->
+    <script type="text/javascript">
+
+        fbq('init', '671077323673416', {}, {
+            "agent": "woocommerce-4.8.0-2.2.0"
+        });
+
+        fbq('track', 'PageView', {
+            "source": "woocommerce",
+            "version": "4.8.0",
+            "pluginVersion": "2.2.0"
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            jQuery && jQuery(function ($) {
+                // insert placeholder for events injected when a product is added to the cart through AJAX
+                $(document.body).append('<div class=\"wc-facebook-pixel-event-placeholder\"></div>');
+            });
+        }, false);
+
+    </script>
+    <!-- WooCommerce Facebook Integration End -->
+    <style type="text/css" data-type="vc_shortcodes-custom-css">
+        .vc_custom_1445455215877 {
+            border-radius: 2px !important;
+        }
+
+        .vc_custom_1445455215877 {
+            border-radius: 2px !important;
+        }
+    </style>
+    <noscript>
+    <style>
+        .wpb_animate_when_almost_visible {
+            opacity: 1;
+        }
+    </style></noscript>
+
+    <style>
+    </style>
+</head>
+<body class="home page-template page-template-page-home page-template-page-home-php page page-id-5 logged-in theme-laboutique woocommerce-no-js tribe-no-js wpb-js-composer js-comp-ver-4.7.4 vc_responsive">
+
+    @RenderBody() 
+
+</body>
+
+</html>

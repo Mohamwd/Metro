@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{CFDBD410-85B2-4D56-99B6-8FDF1FF2D638}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{E025970C-5887-45DE-9D6C-9C5ABEBCADE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{8E404C8A-2804-47AA-A8A9-335851F09273}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{F7033890-2C7B-494F-9544-9DE8A0504EF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{E580517F-B7AA-41AF-BD39-D3F913E6B548}"
+	ProjectSection(SolutionItems) = preProject
+		gulp-config.js = gulp-config.js
+		src\ProductInfo.cs = src\ProductInfo.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Metroag", "Metroag", "{8DBB447F-4A94-4AE5-8596-FFEB98D30791}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{CA8AC5CE-F5E8-49B6-908E-4F57FC047FB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metro.Feature.Identity", "src\Feature\Identity\code\Metro.Feature.Identity.csproj", "{2AAC3626-D951-443C-8682-24960D820BEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metro.Project.Common", "src\Project\Common\Code\Metro.Project.Common.csproj", "{0533AE3D-A9A9-421C-B756-BC12A2DEEACF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metro.Project.Website", "src\Project\Metro\Code\Metro.Project.Website.csproj", "{174D7564-BCD7-4635-81F2-F62A066864BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Navigation", "Navigation", "{F2DEEF09-4DBF-4AF7-9323-9C73F7D86F8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metro.Feature.Navigation", "src\Feature\Navigation\code\Metro.Feature.Navigation.csproj", "{23790E82-1614-46E2-AEF2-677A78E92C5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Azure-Release|Any CPU = Azure-Release|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AAC3626-D951-443C-8682-24960D820BEA}.Azure-Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AAC3626-D951-443C-8682-24960D820BEA}.Azure-Release|Any CPU.Build.0 = Release|Any CPU
+		{2AAC3626-D951-443C-8682-24960D820BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AAC3626-D951-443C-8682-24960D820BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AAC3626-D951-443C-8682-24960D820BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AAC3626-D951-443C-8682-24960D820BEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0533AE3D-A9A9-421C-B756-BC12A2DEEACF}.Azure-Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0533AE3D-A9A9-421C-B756-BC12A2DEEACF}.Azure-Release|Any CPU.Build.0 = Release|Any CPU
+		{0533AE3D-A9A9-421C-B756-BC12A2DEEACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0533AE3D-A9A9-421C-B756-BC12A2DEEACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0533AE3D-A9A9-421C-B756-BC12A2DEEACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0533AE3D-A9A9-421C-B756-BC12A2DEEACF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174D7564-BCD7-4635-81F2-F62A066864BA}.Azure-Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174D7564-BCD7-4635-81F2-F62A066864BA}.Azure-Release|Any CPU.Build.0 = Release|Any CPU
+		{174D7564-BCD7-4635-81F2-F62A066864BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174D7564-BCD7-4635-81F2-F62A066864BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174D7564-BCD7-4635-81F2-F62A066864BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174D7564-BCD7-4635-81F2-F62A066864BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23790E82-1614-46E2-AEF2-677A78E92C5B}.Azure-Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23790E82-1614-46E2-AEF2-677A78E92C5B}.Azure-Release|Any CPU.Build.0 = Release|Any CPU
+		{23790E82-1614-46E2-AEF2-677A78E92C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23790E82-1614-46E2-AEF2-677A78E92C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23790E82-1614-46E2-AEF2-677A78E92C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23790E82-1614-46E2-AEF2-677A78E92C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F7033890-2C7B-494F-9544-9DE8A0504EF3} = {CFDBD410-85B2-4D56-99B6-8FDF1FF2D638}
+		{8DBB447F-4A94-4AE5-8596-FFEB98D30791} = {CFDBD410-85B2-4D56-99B6-8FDF1FF2D638}
+		{CA8AC5CE-F5E8-49B6-908E-4F57FC047FB7} = {8E404C8A-2804-47AA-A8A9-335851F09273}
+		{2AAC3626-D951-443C-8682-24960D820BEA} = {CA8AC5CE-F5E8-49B6-908E-4F57FC047FB7}
+		{0533AE3D-A9A9-421C-B756-BC12A2DEEACF} = {F7033890-2C7B-494F-9544-9DE8A0504EF3}
+		{174D7564-BCD7-4635-81F2-F62A066864BA} = {8DBB447F-4A94-4AE5-8596-FFEB98D30791}
+		{F2DEEF09-4DBF-4AF7-9323-9C73F7D86F8F} = {8E404C8A-2804-47AA-A8A9-335851F09273}
+		{23790E82-1614-46E2-AEF2-677A78E92C5B} = {F2DEEF09-4DBF-4AF7-9323-9C73F7D86F8F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B2CE709-65F8-45D6-869E-405DBA3FB3FA}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal

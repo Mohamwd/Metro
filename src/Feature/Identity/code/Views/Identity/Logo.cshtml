@@ -1,0 +1,13 @@
+﻿@using Metro.Feature.Identity
+
+@model Sitecore.Mvc.Presentation.RenderingModel
+
+@{
+    var homeUrl = Sitecore.Links.LinkManager.GetItemUrl(Sitecore.Context.Database.GetItem(Sitecore.Context.Site.StartPath));
+} 
+
+<div class="logo">
+    <a href="@homeUrl" title="←Back home">
+        @Html.Sitecore().Field(Templates.Logo.Fields.Image.ToString(), Model.Item)
+    </a>
+</div>

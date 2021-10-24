@@ -1,0 +1,45 @@
+﻿@model Sitecore.Mvc.Presentation.RenderingModel
+
+
+<!-- Navigation -->
+<nav class="navigation visible-desktop">
+    <div class="container">
+
+        <div class="row">
+            <div class="span8">
+                <!-- Begin Menu Container -->
+                <div class="megamenu_container">
+                    <div class="menu-sidebar-container">
+                        <ul id="menu-sidebar" class="main-menu">
+                            @Html.Sitecore().DynamicPlaceholder("menu-item")
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="span4">
+
+
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<!-- End class="navigation" -->
+
+
+<script>
+    function StickMenue(e) { 
+        e.stopPropagation()
+        e.preventDefault()
+        document.querySelectorAll("ul.sub-menu").forEach(function (el) { el.style.display="none" })
+        var element = e.target;
+        element.nextElementSibling.style.display = 'block';
+        element.nextElementSibling.style.left = '0px';
+        element.nextElementSibling.style.top = '50px';
+         
+    }
+</script>
